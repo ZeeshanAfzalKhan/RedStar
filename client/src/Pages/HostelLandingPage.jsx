@@ -55,6 +55,7 @@ const RoomDetailModal = ({ room, onClose }) => {
             <img
               key={i}
               src={`/${img}`}
+              loading="lazy"
               alt={room.title}
               className="rounded-lg shadow-md"
               style={{ width: "100%", height: "auto" }}
@@ -263,6 +264,7 @@ const HostelLandingPage = () => {
               <img
                 src={`/${img}`}
                 alt="Hostel"
+                loading="lazy"
                 className="w-full h-64 object-cover hover:scale-105 transition-transform"
               />
             </div>
