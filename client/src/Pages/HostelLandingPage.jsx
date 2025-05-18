@@ -110,8 +110,8 @@ const HostelLandingPage = () => {
             <a href="#rooms" className="hover:text-[#fc0303]">
               Rooms
             </a>
-            <a href="#amenities" className="hover:text-[#fc0303]">
-              Amenities
+            <a href="#facilities" className="hover:text-[#fc0303]">
+              Facilities
             </a>
             <a href="#gallery" className="hover:text-[#fc0303]">
               Gallery
@@ -128,7 +128,10 @@ const HostelLandingPage = () => {
           </div>
         </div>
         {menuOpen && (
-          <div className="md:hidden mt-4 space-y-2" onClick={() => setMenuOpen(!menuOpen)}>
+          <div
+            className="md:hidden mt-4 space-y-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             {/* Mobile Menu */}
             <a href="#hero" className="block hover:text-[#fc0303]">
               Home
@@ -139,8 +142,8 @@ const HostelLandingPage = () => {
             <a href="#rooms" className="block hover:text-[#fc0303]">
               Rooms
             </a>
-            <a href="#amenities" className="block hover:text-[#fc0303]">
-              Amenities
+            <a href="#facilities" className="block hover:text-[#fc0303]">
+              Facilities
             </a>
             <a href="#gallery" className="block hover:text-[#fc0303]">
               Gallery
@@ -191,6 +194,45 @@ const HostelLandingPage = () => {
         </p>
       </section>
 
+      {/* Gallery */}
+      <section id="gallery" className="py-16 px-4 md:px-20 bg-[#fff0f0]">
+        <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-scroll whitespace-nowrap no-scrollbar"
+        >
+          {[
+            "PG Side 2.jpg",
+            "Pg mess.jpg",
+            "PG Front.jpg",
+            "PG mess 2.jpg",
+            "Pg Full.jpg",
+            "Pg water1.jpg",
+            "Pg balcony.jpg",
+            "Pg corridor.jpg",
+            "PG Side.jpg",
+            "PG Office.jpg",
+            "Pg pic1.jpg",
+            "PG Fire Entenguisher.jpg",
+            "Pg inverter.jpg",
+            "Pg Bathroom.jpg",
+            "Pg Toilet.jpg",
+          ].map((img, i) => (
+            <div
+              key={i}
+              className="min-w-[300px] max-w-sm rounded-xl shadow overflow-hidden"
+            >
+              <img
+                src={`/${img}`}
+                alt="Hostel"
+                loading="lazy"
+                className="w-full h-64 object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Rooms & Pricing */}
       <section id="rooms" className="bg-[#fff0f0] py-16 px-4 md:px-20">
         <h2 className="text-3xl font-bold mb-8 text-center">Rooms & Pricing</h2>
@@ -213,9 +255,9 @@ const HostelLandingPage = () => {
         </div>
       </section>
 
-      {/* Amenities */}
-      <section id="amenities" className="py-16 px-4 md:px-20 bg-white">
-        <h2 className="text-3xl font-bold mb-8 text-center">Amenities</h2>
+      {/* Facilities */}
+      <section id="facilities" className="py-16 px-4 md:px-20 bg-white">
+        <h2 className="text-3xl font-bold mb-8 text-center">Facilities</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             "Wi-Fi",
@@ -229,45 +271,6 @@ const HostelLandingPage = () => {
           ].map((a, i) => (
             <div key={i} className="bg-[#ffe6e6] p-4 rounded-xl shadow">
               <p className="text-lg font-medium">{a}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section id="gallery" className="py-16 px-4 md:px-20 bg-[#fff0f0]">
-        <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-scroll whitespace-nowrap no-scrollbar"
-        >
-          {[
-            "PG Side 2.jpg",
-            "Pg Full.jpg",
-            "PG Side.jpg",
-            "PG Front.jpg",
-            "Pg mess.jpg",
-            "PG mess 2.jpg",
-            "Pg water1.jpg",
-            "Pg balcony.jpg",
-            "Pg corridor.jpg",
-            "PG Office.jpg",
-            "Pg pic1.jpg",
-            "PG Fire Entenguisher.jpg",
-            "Pg inverter.jpg",
-            "Pg Bathroom.jpg",
-            "Pg Toilet.jpg",
-          ].map((img, i) => (
-            <div
-              key={i}
-              className="min-w-[300px] max-w-sm rounded-xl shadow overflow-hidden"
-            >
-              <img
-                src={`/${img}`}
-                alt="Hostel"
-                loading="lazy"
-                className="w-full h-64 object-cover hover:scale-105 transition-transform"
-              />
             </div>
           ))}
         </div>
