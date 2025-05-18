@@ -128,7 +128,8 @@ const HostelLandingPage = () => {
           </div>
         </div>
         {menuOpen && (
-          <div className="md:hidden mt-4 space-y-2">
+          <div className="md:hidden mt-4 space-y-2" onClick={() => setMenuOpen(!menuOpen)}>
+            {/* Mobile Menu */}
             <a href="#hero" className="block hover:text-[#fc0303]">
               Home
             </a>
