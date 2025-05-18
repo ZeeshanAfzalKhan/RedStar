@@ -36,9 +36,9 @@ const RoomDetailModal = ({ room, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg max-w-2xl w-full text-[#fc0303] relative">
+      <div className="bg-white p-8 rounded-lg max-w-2xl w-full text-[#fc0303] relative max-h-[90vh] overflow-y-auto">
         <button
-          className="absolute top-2 right-2 text-[#fc0303] text-xl"
+          className="absolute top-4 right-4 text-[#fc0303] text-6xl"
           onClick={onClose}
         >
           &times;
